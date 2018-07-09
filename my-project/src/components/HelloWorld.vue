@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <!--子组件HelloWorld.vue的msg:<br>-->
-    <h2>{{ msg }}</h2>
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
