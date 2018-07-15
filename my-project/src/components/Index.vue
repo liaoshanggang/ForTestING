@@ -1,36 +1,55 @@
 <template>
   <div class="hello">
     <!--子组件HelloWorld.vue的msg:<br>-->
-    <h1>{{ msg }}</h1>
+    <el-row>
+      <el-tag type="success">{{ msg }}</el-tag>
+    </el-row>
+    <el-row>
+      <el-button icon="el-icon-search" circle></el-button>
+      <el-button type="primary" icon="el-icon-edit" circle></el-button>
+      <el-button type="success" icon="el-icon-check" circle></el-button>
+      <el-button type="info" icon="el-icon-message" circle></el-button>
+      <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+      <el-button type="danger" icon="el-icon-delete" circle></el-button>
+      <el-button @click="visible = true">Button</el-button>
+      <el-dialog :visible.sync="visible" title="Hello world">
+        <p>Try Element</p>
+      </el-dialog>
+    </el-row>
+    <el-row>
+      <el-button icon="el-icon-search" circle></el-button>
+    </el-row>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: "Index",
+    data() {
+        return {
+            msg: "Welcome to Your Vue.js App",
+            visible: false
+        };
     }
-  }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+h1,
+h2 {
+    font-weight: normal;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
 a {
-  color: #42b983;
+    color: #42b983;
 }
 </style>
 <!--<h2>Essential Links</h2>
